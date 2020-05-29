@@ -1,0 +1,24 @@
+{
+  "name": "agoodburger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwenniegwen/aGoodBurger.git"
+  },
+  "author": "gwendolyn thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gwenniegwen/aGoodBurger/issues"
+  },
+  "homepage": "https://github.com/gwenniegwen/aGoodBurger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mysql": "^2.18.1"
+  }
+}

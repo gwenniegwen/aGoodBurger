@@ -1,0 +1,49 @@
+<div class = "title">
+<h1>A Good Burger</h1>
+<img src="double-double.png" >
+</div>
+
+<div>
+<h2>Search Burger</h2>
+<form class="create-form" action="/burger" method="POST">
+<input type="text" name="burger_name"/>
+<button class= "btn" type= "submit">Submit</button>
+</form>
+</div>
+
+<div>
+<h2> Burger Logger </h2>
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+<li>{{burger_name}}<button class ="btn" type="button" value={{id}} onclick="devoured(this.value)">Devour The Burger</button> </li>
+  {{/unless}}
+  {{/each}}
+</ul>
+</div>
+
+<div>
+<h2>Devoured Burgers</h2>
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+<li>{{burger_name}}	</li>
+  {{/if}}
+  {{/each}}
+</ul>
+</div>
+<script>
+	function devoured(id){
+				$.ajax({
+				method:"PUT",
+				url: `/api/burger/${id}`,
+				})
+				.then(function (res){
+					location.reload()
+				})
+			}
+
+ 
+
+</script>
+ 
